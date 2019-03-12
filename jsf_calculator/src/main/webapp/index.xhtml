@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>CALCULATOR</title>
+	
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="font-awesome.min.css"></h:outputStylesheet>
+
+	<link href="resource/css/bootstrap.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="resource/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<h:outputScript library="js" name="bootstrap.min.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<h:outputScript library="js" name="popper.min.js"></h:outputScript>
+</h:head> 
+<body> 
+<section class="container">
+	<h1>CALCULATOR</h1>
+<h:panelGrid border="1"  styleClass="badge-danger w-50 ">
+<h:form>
+	<h:inputText value="Numbers are here" disabled="true" styleClass="text-md-center w-100 h-100 text-danger"/>
+		<h:panelGrid columns="4" styleClass="w-100">
+			<h:button value="1" styleClass="btn btn-danger  btn-lg ml-4 " ></h:button>
+			<h:button value="2" styleClass="btn btn-danger  btn-lg mr-4" ></h:button>
+			<h:button value="3" styleClass="btn btn-danger  btn-lg  mr-4" ></h:button>
+			<h:button value="+" styleClass="btn btn-danger  btn-lg  " ></h:button>
+			<h:button value="4" styleClass="btn btn-danger  btn-lg ml-4" ></h:button>
+			<h:button value="5" styleClass="btn btn-danger  btn-lg  mr-4" ></h:button>
+			<h:button value="6" styleClass="btn btn-danger  btn-lg  mr-4" ></h:button>
+			<h:button value="-" styleClass="btn btn-danger  btn-lg " ></h:button>
+			<h:button value="7" styleClass="btn btn-danger  btn-lg ml-4" ></h:button>
+			<h:button value="8" styleClass="btn btn-danger  btn-lg mr-4" ></h:button>
+			<h:button value="9" styleClass="btn btn-danger  btn-lg mr-4" ></h:button>
+			<h:button value="*" styleClass="btn btn-danger  btn-lg " ></h:button>
+			<h:button value="0" styleClass="btn btn-danger  btn-lg ml-4" ></h:button>
+			<h:button value="." styleClass="btn btn-danger  btn-lg mr-4" ></h:button>
+			<h:button value="=" styleClass="btn btn-danger  btn-lg mr-4" ></h:button>
+			<h:button value="%" styleClass="btn btn-danger  btn-lg " ></h:button>
+		</h:panelGrid>
+	</h:form>
+</h:panelGrid>
+	</section>
+</body> 
+</html>
