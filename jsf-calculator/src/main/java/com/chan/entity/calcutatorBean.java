@@ -1,6 +1,6 @@
 package com.chan.entity;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
@@ -11,6 +11,7 @@ import javax.inject.Named;
 @RequestScoped
 
 public class calcutatorBean implements Serializable {
+	
 	
 	private static final long serialVersionUID = 1L;
 	private int firstNum;
