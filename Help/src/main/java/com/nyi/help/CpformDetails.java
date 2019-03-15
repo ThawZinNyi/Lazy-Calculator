@@ -29,5 +29,7 @@ public class CpformDetails implements Serializable {
 	public void setCp(Cpform cp) {
 		this.cp = cp;
 	}
-	
+	public String[] geteducation() {
+		return new String[] {"Java SE", "Java EE", "Java Web", "Spring", "Android","porn" };
+	}
 }

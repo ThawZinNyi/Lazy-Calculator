@@ -47,11 +47,15 @@
 
 <h:outputLabel value="Your Birthday " styleClass="text-info mt-5"/>
 	<h:inputText value="#{cpformDetails.cp.f_name}"  styleClass="form-control mt-5"  p:placeholder="Enter Your Birthday" />
-	
+
+<h:outputLabel value="Education" />
+	<h:selectManyCheckbox value="#{cpformDetails.cp.education}"  layout="pageDirection">
+		<f:selectItems value="#{cpformDetails.education}" var="e"  itemLabel="#{e}" itemValue="#{e}"></f:selectItems>
+	</h:selectManyCheckbox>
 	</h:panelGrid>
 	
 	<h:commandLink styleClass="btn btn-outline-danger	 mr-2"  action="#{cpformDetails.save()}">
-				<i class="fa fa-send"></i> Save
+				<i class="fa fa-send"></i> 
 			</h:commandLink>
 	</h:form>
 	</section>

@@ -32,6 +32,13 @@
 	<h:outputLabel value="#{cpformDetails.cp.ph}"  styleClass="text-info mt-3" />
 	
 	<h:outputLabel value="#{cpformDetails.cp.f_name}"  styleClass="text-info mt-3" />
+	<h:panelGroup>
+		<ul>
+				<ui:repeat var="e" value="#{cpformDetails.cp.education}">
+					<li>#{e}</li>
+				</ui:repeat>
+		</ul>
+	</h:panelGroup>
 	</h:panelGrid>
 	</section>
 </body> 
