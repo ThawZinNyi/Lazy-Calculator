@@ -1,26 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"> 
 
-<h:head></h:head> 
-<body> 
-<h:panelGrid columns="2">
-	<h:outputLabel value="Your name" />
-	<h:outputLabel  value="#{cpformDetails.cp.name}" />
+<h:head>
+	<title>CV</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="font-awesome.min.css"></h:outputStylesheet>
+
+	<link href="resource/css/bootstrap.min.css" rel="stylesheet"
+		type="text/css" />
+	<link href="resource/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<h:outputScript library="js" name="bootstrap.min.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery.min.js"></h:outputScript>
+	<h:outputScript library="js" name="popper.min.js"></h:outputScript>
+</h:head> 
+<body > 
+<section class="container">
+<h:panelGrid columns="2" >
+	<h:outputLabel value="Name" styleClass="text-info mt-3"  />
+	<h:outputLabel  value="#{cpformDetails.cp.name}" styleClass="font-weight-bold mt-3" />
 	
-	<h:outputLabel value="Your  age" />
-	<h:outputLabel value="#{cpformDetails.cp.age}" />
+	<h:outputLabel value="#{cpformDetails.cp.age}"  styleClass="text-info mt-3" />
 	
-	<h:outputLabel value="Your address" />
-	<h:outputLabel value="#{cpformDetails.cp.address}" />
+	<h:outputLabel value="#{cpformDetails.cp.address}" styleClass="text-info mt-3" />
 	
-	<h:outputLabel value="Your  phno" />
-	<h:outputLabel value="#{cpformDetails.cp.ph}" />
+	<h:outputLabel value="#{cpformDetails.cp.ph}"  styleClass="text-info mt-3" />
 	
-	<h:outputLabel value="Your fathername "/>
-	<h:outputLabel value="#{cpformDetails.cp.f_name}" />
+	<h:outputLabel value="#{cpformDetails.cp.f_name}"  styleClass="text-info mt-3" />
 	</h:panelGrid>
+	</section>
 </body> 
 </html>

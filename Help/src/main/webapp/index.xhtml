@@ -1,8 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"> 
 
 <h:head>
 <title>CV</title>
@@ -20,29 +21,39 @@
 	<h:outputScript library="js" name="popper.min.js"></h:outputScript>
 </h:head> 
 
-<body> 
-<h:form>
-	<h:panelGrid columns="2">
+<body > 
+<section class="container">
+	<h:form>
+		<h1>Please add Your CV form</h1><span></span>
+	<h:panelGrid columns="2" styleClass="">
 	
-	<h:outputLabel value="Your name" />
-	<h:inputText value="#{cpformDetails.cp.name}" />
+	<h:outputLabel value="Your name : "  styleClass="text-info mt-3" />
+	<h:inputText value="#{cpformDetails.cp.name}"   p:placeholder="Enter Your  Name"  styleClass="form-control mt-3"/>
 	
-	<h:outputLabel value="Your  age" />
-	<h:inputText value="#{cpformDetails.cp.age}" />
+	<h:outputLabel value="Your  age"  styleClass="text-info mt-5"/>
+	<h:inputText value="#{cpformDetails.cp.age}"  p:placeholder="Enter Your  Aged"  styleClass="form-control mt-5"/>
 	
-	<h:outputLabel value="Your address" />
-	<h:inputText value="#{cpformDetails.cp.address}" />
+	<h:outputLabel value="Your address" styleClass="text-info mt-5" />
+	<h:inputText value="#{cpformDetails.cp.address}"  styleClass="form-control mt-5"  p:placeholder="Enter Your  Address" />
 	
-	<h:outputLabel value="Your  phno" />
-	<h:inputText value="#{cpformDetails.cp.ph}" />
+	<h:outputLabel value="Your  phno" styleClass="text-info mt-5" />
+	<h:inputText value="#{cpformDetails.cp.ph}" styleClass="form-control mt-5"  p:placeholder="Enter Your  Phno" />
 	
-	<h:outputLabel value="Your fathername "/>
-	<h:inputText value="#{cpformDetails.cp.f_name}" />
-		
+	<h:outputLabel value="Your fathername " styleClass="text-info mt-5"/>
+	<h:inputText value="#{cpformDetails.cp.f_name}"  styleClass="form-control mt-5"  p:placeholder="Enter Your Fathername" />
+	
+	<h:outputLabel value="Your NRCno " styleClass="text-info mt-5"/>
+	<h:inputText value="#{cpformDetails.cp.f_name}"  styleClass="form-control mt-5"  p:placeholder="Enter Your NRCno" />
+
+<h:outputLabel value="Your Birthday " styleClass="text-info mt-5"/>
+	<h:inputText value="#{cpformDetails.cp.f_name}"  styleClass="form-control mt-5"  p:placeholder="Enter Your Birthday" />
+	
+	</h:panelGrid>
+	
 	<h:commandLink styleClass="btn btn-outline-danger	 mr-2"  action="#{cpformDetails.save()}">
 				<i class="fa fa-send"></i> Save
 			</h:commandLink>
-	</h:panelGrid>
 	</h:form>
+	</section>
 </body> 
 </html>
